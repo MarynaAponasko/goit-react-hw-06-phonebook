@@ -20,20 +20,12 @@ const ContactItem = ({ contact: { id, name, number }, deleteContact }) => {
 };
 
 ContactItem.propTypes = {
-  // поясніть, будь ласка, чому вибиває помилку при такому записі пропсу contact
-  // contact: PropTypes.objectOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string.isRequired,
-  //     name: PropTypes.string.isRequired,
-  //     number: PropTypes.string.isRequired,
-  //   }).isRequired
-  // ).isRequired,
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
   }).isRequired,
-  // deleteContact: PropTypes.func.isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactItem;
